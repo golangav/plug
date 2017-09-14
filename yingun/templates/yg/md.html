@@ -1,0 +1,20 @@
+<table border="1">
+
+    <thead>
+        <tr>
+            {% for row in header_list %}
+                <th>{{ row }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+
+
+    {% for item in xxxxx %}
+        <tr>
+            {% for val in item %}
+                <td>{{ val }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+
+</table>
