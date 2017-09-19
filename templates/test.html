@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>用户名: <input type="text"></p>
+    <p>用户组:
+        <select  id="ugID">
+        {% for row in user_group_list %}
+            <option value="{{ row.pk }}">{{ row.title }}</option>
+        {% endfor %}
+        </select>
+        <a href="#" onclick="popupUrl('/add_test/?popup=ugID')">增加</a>
+    </p>
+
+    <script>
+        function popupUrl(url) {
+            window.open(url,"xxxxxx","status=1,height:500,width:600,toolbar=0,resizeable=0");
+        }
+        function popupCallBackl(popid,id,title) {
+            var tag = document.createElement("option");
+            tag.innerText = title;
+            tag.setAttribute("value",id);
+            tag.setAttribute("selected","selected");
+            var selectid = document.getElementById(popid);
+            selectid.appendChild(tag);
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,4 @@
-{% load yg_list %}
-
+{% load yg_form %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +6,8 @@
     <title>Title</title>
 </head>
 <body>
-
     <h1>添加数据</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-{#        {% for item in form %}#}
-{#            <p>{{ item.field.label }}{{ item }}</p>#}
-{#        {% endfor %}#}
-        <input type="submit" value="提交">
-    </form>
-
-
+    {% show_add_edit_form form %}
 
 </body>
 </html>

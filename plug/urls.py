@@ -7,6 +7,7 @@ from yingun.service import v1
 urlpatterns = [
 
     url(r'^yg/',v1.site.urls),
-    url(r'^test/',views.test)
+
+
 
 ]
